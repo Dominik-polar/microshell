@@ -19,7 +19,7 @@ int main()
 	int exit=0;          
 	char commend[256];
 	char *args[256]; 
-	printf("Witaj w moim microshellu! \nJezeli potrzebujesz pomocy napisz help\n");
+	printf("Hello! \nIf you need help write help\n");
 	do
 		{
 		b=0;                 
@@ -43,16 +43,16 @@ int main()
       		args[a]= strtok(NULL, " ");
 	}
 
-	int i=strcmp(args[0],"help");          /*porownywanie wpisanego slowa z commendmi*/
+	int i=strcmp(args[0],"help");          /*porownywanie wpisanego slowa z komendamii*/
 	int k=strcmp(args[0],"exit");          
 	int j=strcmp(args[0],"cd");   
 	if((i==0)&&(args[1]==NULL))            /*sprawdzenie czy uzytkownik wpisal help*/
 	{
-		printf("Komendy ktore mozesz wykonac:\ncd  - bez sciezki, ~, .., path\nexit\noraz komendy za pomoca fork+exec\nWykonal Dominik Polarczyk\n");
+		printf("Commands that you can use:\ncd  - without args, ~, .., path\nexit\nand commands with fork+exec\nMade by Dominik Polarczyk\n");
 	}
 	else if((k==0)&&(args[1]==NULL))       /*sprawdzenie czy uzytkownik chce wyjsc z microshella*/
 	{
-		printf("Nastapilo wylaczenie Microshella\n");
+		printf("Exit from Microshell\n");
 		exit=1;                             /*zmienna porownywana w while zmieniona*/
 	}
 	else if((j==0)&&(args[2]==NULL))        /*sprawdzenie czy uzytkownik wpisal cd z dobrymi parametrami czyli cd /path*/
@@ -89,7 +89,7 @@ int main()
                 		strcat(path,args[1]);
                 		if(chdir(path)==-1)
                 		{
-				printf("Podales bledna sciezke\n");
+				printf("Wrong path\n");
         	        	}
         		}
 		}
