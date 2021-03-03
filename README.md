@@ -8,7 +8,7 @@
 * [Sources](#sources)
 
 ## General info
-This project is a simple shell that use fork+execlp.
+This project is a simple shell that uses fork+execlp.
 	
 ## Technologies
 Project is created with:
@@ -18,10 +18,10 @@ Project is created with:
 To run this project, download source code and run it on Linux
 
 ## Commands
-help - gives info about project and commands
-exit - use it to end program
-cd + args - changes direction with arguments
-any bash commands like ls or mkdir works fine within this shell by using fork+execlp
+* help - gives info about project and commands
+* exit - use it to end program
+* cd + args - changes direction with arguments
+* any bash commands like ls or mkdir works fine within this shell by using fork+execlp
 
 Example use:
 
